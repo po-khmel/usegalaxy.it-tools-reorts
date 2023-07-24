@@ -21,7 +21,7 @@ pipeline {
             steps {
                 deleteDir()
                 // Setup ShiningPanda virtualenv
-                withPythonEnv('my-virtualenv') {
+                withPythonEnv('Python-3.8.10') {
                     sh 'git checkout main'
                     sh 'mkdir reports-$(date +%Y-%m) || true'
                     sh 'POST="$(date +%Y-%m-%d-%H-%M)-tools-update.md"'
